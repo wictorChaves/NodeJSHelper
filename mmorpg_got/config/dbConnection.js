@@ -10,7 +10,7 @@ var connMongoDB = function () {
     var serverConfigOptions = {};
     var serverConfig = mongo.Server(host, port, serverConfigOptions);
     var options = {};
-    
+
     return new mongo.Db(databaseName, serverConfig, options);
 }
 
