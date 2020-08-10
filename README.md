@@ -4,7 +4,8 @@
  
 ## Helper
 
- - [Exemplos](https://github.com/expressjs/express/tree/master/examples)
+ - [Express](https://github.com/expressjs/express/tree/master/examples)
+ - [Socket.io](https://github.com/socketio/socket.io/tree/master/examples)
 
 ## Projetos
 
