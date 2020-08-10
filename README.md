@@ -6,6 +6,7 @@
 
  - [Express](https://github.com/expressjs/express/tree/master/examples)
  - [Socket.io](https://github.com/socketio/socket.io/tree/master/examples)
+ - [MongoDB](http://mongodb.github.io/node-mongodb-native/)
 
 ## Projetos
 
