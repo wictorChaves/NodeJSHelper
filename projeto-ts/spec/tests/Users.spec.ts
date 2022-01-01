@@ -1,21 +1,19 @@
-import supertest from 'supertest';
-import StatusCodes from 'http-status-codes';
+import supertest           from 'supertest';
+import StatusCodes         from 'http-status-codes';
 import { SuperTest, Test } from 'supertest';
 
-import app from '@server';
-import UserDao from '@daos/User/UserDao.mock';
-import User, { IUser } from '@entities/User';
-import { pErr } from '@shared/functions';
-import { paramMissingError } from '@shared/constants';
+import app                     from '@server';
+import UserDao                 from '@daos/User/UserDao.mock';
+import User    ,                    { IUser } from '@entities/User';
+import { pErr }                from '@shared/functions';
+import { paramMissingError }   from '@shared/constants';
 import { IReqBody, IResponse } from '../support/types';
-
-
 
 describe('Users Routes', () => {
 
-    const usersPath = '/api/users';
-    const getUsersPath = `${usersPath}/all`;
-    const addUsersPath = `${usersPath}/add`;
+    const usersPath      = '/api/users';
+    const getUsersPath   = `${usersPath}/all`;
+    const addUsersPath   = `${usersPath}/add`;
     const updateUserPath = `${usersPath}/update`;
     const deleteUserPath = `${usersPath}/delete/:id`;
 
@@ -44,7 +42,7 @@ describe('Users Routes', () => {
                     pErr(err);
                     expect(res.status).toBe(OK);
                     // Caste instance-objects to 'User' objects
-                    const respUsers = res.body.users;
+                    const respUsers        = res.body.users;
                     const retUsers: User[] = respUsers.map((user: IUser) => {
                         return new User(user);
                     });
