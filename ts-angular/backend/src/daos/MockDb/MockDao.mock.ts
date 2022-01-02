@@ -1,11 +1,11 @@
-import jsonfile from 'jsonfile';
+import jsonfile  from 'jsonfile';
 import { IUser } from '@entities/User';
-
+import { IName } from '@entities/Name';
 
 interface IDatabase {
     users: IUser[];
+    names: IName[];
 }
-
 
 class MockDaoMock {
 
@@ -20,6 +20,7 @@ class MockDaoMock {
     protected saveDb(db: IDatabase): Promise<void> {
         return jsonfile.writeFile(this.dbFilePath, db);
     }
+
 }
 
 export default MockDaoMock;
